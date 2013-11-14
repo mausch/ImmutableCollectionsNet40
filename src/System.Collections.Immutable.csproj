@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{F3770EA5-4364-4214-AEFC-4364DCD42499}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>System.Collections.Immutable</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="System.Collections.Generic\IHashKeyCollection.cs" />
+    <Compile Include="System.Collections.Generic\IReadOnlyCollection.cs" />
+    <Compile Include="System.Collections.Generic\IReadOnlyDictionary.cs" />
+    <Compile Include="System.Collections.Generic\IReadOnlyList.cs" />
+    <Compile Include="System.Collections.Generic\ISortKeyCollection.cs" />
+    <Compile Include="System.Collections.Immutable\AllocFreeConcurrentStack.cs" />
+    <Compile Include="System.Collections.Immutable\DictionaryEnumerator.cs" />
+    <Compile Include="System.Collections.Immutable\IBinaryTree.cs" />
+    <Compile Include="System.Collections.Immutable\IImmutableDictionary.cs" />
+    <Compile Include="System.Collections.Immutable\IImmutableList.cs" />
+    <Compile Include="System.Collections.Immutable\IImmutableListQueries.cs" />
+    <Compile Include="System.Collections.Immutable\IImmutableQueue.cs" />
+    <Compile Include="System.Collections.Immutable\IImmutableSet.cs" />
+    <Compile Include="System.Collections.Immutable\IImmutableStack.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableDictionary.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableExtensions.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableHashSet.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableInterlocked.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableList.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableQueue.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableSortedDictionary.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableSortedSet.cs" />
+    <Compile Include="System.Collections.Immutable\ImmutableStack.cs" />
+    <Compile Include="System.Collections.Immutable\IOrderedCollection.cs" />
+    <Compile Include="System.Collections.Immutable\ISecurePooledObjectUser.cs" />
+    <Compile Include="System.Collections.Immutable\KeysCollectionAccessor.cs" />
+    <Compile Include="System.Collections.Immutable\KeysOrValuesCollectionAccessor.cs" />
+    <Compile Include="System.Collections.Immutable\RefAsValueType.cs" />
+    <Compile Include="System.Collections.Immutable\SecureObjectPool.cs" />
+    <Compile Include="System.Collections.Immutable\SecurePooledObject.cs" />
+    <Compile Include="System.Collections.Immutable\Strings.cs" />
+    <Compile Include="System.Collections.Immutable\ValuesCollectionAccessor.cs" />
+    <Compile Include="System.Threading\Volatile.cs" />
+    <Compile Include="Validation\Requires.cs" />
+    <Compile Include="Validation\ValidatedNotNullAttribute.cs" />
+    <Compile Include="Validation\ValidationStrings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="System.Collections.Immutable\Strings.resources" />
+    <EmbeddedResource Include="System.Collections.Immutable\Validation.ValidationStrings.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
